@@ -26,13 +26,13 @@ pipeline{
             }
         }
 
-        post {
-            success {
-                junit 'target/surefire-reports/*.xml'
-                archiveArtifacts 'target/*.jar'
-            }
-        }
 
+    }
+    post {
+        success {
+            junit 'target/surefire-reports/*.xml'
+            archiveArtifacts 'target/*.jar'
+        }
     }
 
 }
